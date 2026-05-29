@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { CalendarDays, ShieldCheck, Star } from "lucide-react";
 import { useScrollAnimation, useCountUp } from "@/hooks/use-scroll-animation";
 import { fadeInLeft, fadeInRight, fadeIn, stagger } from "@/lib/motion-presets";
+import heroClinic from "@/assets/hero-clinic.jpg";
+
 
 function Stat({ value, suffix = "", label }: { value: number; suffix?: string; label: string }) {
   const { ref, inView } = useScrollAnimation<HTMLDivElement>(0.4);
