@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { CalendarDays, ShieldCheck, Star } from "lucide-react";
 import { useScrollAnimation, useCountUp } from "@/hooks/use-scroll-animation";
 import { fadeInLeft, fadeInRight, fadeIn, stagger } from "@/lib/motion-presets";
+import heroClinic from "@/assets/hero-clinic.jpg";
+
 
 function Stat({ value, suffix = "", label }: { value: number; suffix?: string; label: string }) {
   const { ref, inView } = useScrollAnimation<HTMLDivElement>(0.4);
@@ -116,9 +118,8 @@ export default function Hero() {
         <motion.div initial="hidden" animate="visible" variants={fadeInRight} className="relative">
           <div className="relative overflow-hidden rounded-[28px] shadow-[0_30px_80px_-30px_rgba(46,109,164,0.45)]">
             <img
-              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e2f?w=900&q=80"
-              alt="Dentista sorrindo em ambiente clínico moderno"
-              loading="lazy"
+              src={heroClinic}
+              alt="Ambiente moderno e sofisticado da Clínica Dra. Isabela Voss"
               className="h-[560px] w-full object-cover"
             />
           </div>
